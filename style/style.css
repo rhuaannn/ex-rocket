@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  background-color: #c2c2c2;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  gap: 3.2rem;
+  align-items: center;
+  padding: 4rem 4rem 4rem 7.2rem;
+  /* background-color: blue; */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3.2rem;
+}
+
+.menu a {
+  padding: 1rem;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  color: #70e;
+}
+
+.conteudo {
+  text-align: center;
+  margin-top: 20rem;
+}
+
+.conteudo h1,
+.content-exploration h2,
+.content-universe h2 {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #e1e1e6;
+  padding-bottom: 2.4rem;
+}
+
+.conteudo h1 {
+  animation: topdown 700ms 350ms backwards;
+}
+
+.conteudo a {
+  display: inline-block;
+  border: 2px solid #ffffff;
+  border-radius: 5px;
+  padding: 1.2rem 3.2rem;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 1.71;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  animation: downtop 700ms 350ms backwards;
+}
+
+.conteudo a:hover {
+  background-color: #ffffff;
+  color: #02799d;
+}
+
+.content-exploration,
+.content-universe {
+  padding-top: 6.4rem;
+  padding-left: 10rem;
+  animation: left-to-right 1s 250ms backwards;
+}
+
+.content-exploration p,
+.content-universe p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #e1e1e6;
+  width: 62ch;
+}
+
+.mountains-img {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+}
+
+@keyframes left-to-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes downtop {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes topdown {
+  0% {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
